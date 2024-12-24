@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Invitation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffe6e6, #ffcccc);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .invitation {
+            font-size: 2em;
+            color: #ff3366;
+            text-align: center;
+            opacity: 0;
+            animation: textFadeIn 2s forwards, textSlideIn 2s forwards;
+        }
+
+        .photo-container {
+            width: 100%;
+            max-width: 100%;
+            overflow-y: auto;
+            max-height: 80vh; /* Ensures photo fits within viewport height */
+            display: none;
+            animation: fadeInPhoto 2s forwards;
+        }
+
+        .photo {
+            width: 100%;
+            height: auto;
+        }
+
+        @keyframes textFadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes textSlideIn {
+            0% { transform: translateY(50px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes fadeInPhoto {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation">You Are Cordially Invited to Celebrate Sagar Utsav 2024</div>
+    <div id="photo-container" class="photo-container">
+        <img src="sagar.jpg" alt="Invitation Photo" class="photo">
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const photoContainer = document.getElementById('photo-container');
+            photoContainer.style.display = 'block';
+        }, 2000);
+    </script>
+</body>
+</html>
