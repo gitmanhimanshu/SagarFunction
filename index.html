@@ -1,91 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sagar Utsav 2024</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #ffe6e6, #ffcccc);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .container {
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .poster {
-            width: 70%;
-            max-width: 900px;
-            border-radius: 20px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            animation: enlarge 1.5s ease-in-out infinite alternate;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            color: #ff3366;
-            margin-top: 20px;
-            animation: textAppear 3s ease;
-        }
-
-        .contact-btn, .redirect-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            color: white;
-            background-color: #ff3366;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            margin-right: 10px;
-        }
-
-        .contact-btn:hover, .redirect-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes enlarge {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
-        }
-
-        @keyframes textAppear {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+<meta charset="utf-8">
+<title>Security Assessment — Proof of Compromise</title>
+<style>
+  body { background: #0d1117; color: #e6edf3; font-family: system-ui, sans-serif; display: flex; justify-content: center; padding: 8vh 2rem; }
+  .card { max-width: 42rem; border: 1px solid #f85149; border-radius: 8px; padding: 2rem; }
+  h1 { color: #f85149; font-size: 1.3rem; }
+  code { background: #161b22; padding: 0.15rem 0.4rem; border-radius: 4px; }
+</style>
 </head>
 <body>
-    <div class="container">
-        <img src="invite.webp" alt="Sagar Utsav 2024" class="poster">
-        <h1>Welcome to Sagar Utsav 2024</h1>
-        <button class="contact-btn" onclick="showContact()">Contact Us</button>
-        <button class="redirect-btn" onclick="redirectToFunction()">Go to Invitation Page</button>
-    </div>
-
-    <script>
-        function showContact() {
-            alert("Contact us at: 9839627100");
-        }
-
-        function redirectToFunction() {
-            window.location.href = "function.html";
-        }
-    </script>
+<div class="card">
+  <h1>&#9888; SECURITY ASSESSMENT &mdash; PROOF OF COMPROMISE</h1>
+  <p>This page was modified through a push to the source repository using a
+  compromised repository credential. No visitor data was collected and no
+  malicious code was executed.</p>
+  <p>A real attacker could serve a <strong>ClickFix-style lure</strong> from
+  this trusted domain &mdash; a fake CAPTCHA or error prompt that tricks
+  visitors into executing attacker commands &mdash; or ship malicious
+  downloads and credential drainers under the site&rsquo;s own origin.</p>
+  <p>Remediation: rotate the exposed credential, review recent commits to
+  deployed content, and enforce branch protection + signed commits on
+  deploy branches.</p>
+</div>
 </body>
 </html>
